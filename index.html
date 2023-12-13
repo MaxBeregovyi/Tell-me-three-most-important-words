@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW2</title>
+  </head>
+  <body>
+    <script>
+      let userWords = {
+        firstWord: undefined,
+        secondWord: undefined,
+        thirdWord: undefined,
+      };
+
+      let confirmText = confirm("Tell me three most important words 💚");
+      if (confirmText) {
+        let checkFirstWord;
+        do {
+          checkFirstWord = prompt("tell Your first word");
+          if (
+            !(checkFirstWord && checkFirstWord.length && isNaN(checkFirstWord))
+          ) {
+            alert("Enter a word without any digits.🐵");
+          }
+        } while (
+          !(checkFirstWord && checkFirstWord.length && isNaN(checkFirstWord))
+        );
+        userWords.firstWord = checkFirstWord;
+
+        let checkSecondWord;
+        do {
+          checkSecondWord = prompt("Write your second word");
+          if (
+            !(
+              checkSecondWord &&
+              checkSecondWord.length &&
+              isNaN(checkSecondWord)
+            )
+          ) {
+            alert("Bad enter. Enter a word without any digits.👿");
+          }
+        } while (
+          !(checkSecondWord && checkSecondWord.length && isNaN(checkSecondWord))
+        );
+        userWords.secondWord = checkSecondWord;
+
+        let checkThirdWord;
+        do {
+          checkThirdWord = prompt("Write last word");
+          if (
+            !(checkThirdWord && checkThirdWord.length && isNaN(checkThirdWord))
+          ) {
+            alert("Bad enter. Enter a word without any digits. 🤬");
+          }
+        } while (
+          !(checkThirdWord && checkThirdWord?.length && isNaN(checkThirdWord))
+        );
+        userWords.thirdWord = checkThirdWord;
+      } else {
+        alert("You cancelled the process. Program terminated.");
+      }
+
+      console.log(
+        `${userWords.firstWord} ${userWords.secondWord} ${userWords.thirdWord}!`
+      );
+    </script>
+  </body>
+</html>
