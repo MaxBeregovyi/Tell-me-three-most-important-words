@@ -13,11 +13,11 @@
         thirdWord: undefined,
       };
 
-      let confirmText = confirm("Tell me three most important words 💚");
+      let confirmText = confirm("📝 Tell me three most important words 💚");
       if (confirmText) {
         let checkFirstWord;
         do {
-          checkFirstWord = prompt("tell Your first word");
+          checkFirstWord = prompt("Write your first word 🖊");
           if (
             !(checkFirstWord && checkFirstWord.length && isNaN(checkFirstWord))
           ) {
@@ -30,7 +30,7 @@
 
         let checkSecondWord;
         do {
-          checkSecondWord = prompt("Write your second word");
+          checkSecondWord = prompt("Write your second word 🖊");
           if (
             !(
               checkSecondWord &&
@@ -38,7 +38,7 @@
               isNaN(checkSecondWord)
             )
           ) {
-            alert("Bad enter. Enter a word without any digits.👿");
+            alert("Bad enter. Enter a word without any digits .👿");
           }
         } while (
           !(checkSecondWord && checkSecondWord.length && isNaN(checkSecondWord))
@@ -47,7 +47,7 @@
 
         let checkThirdWord;
         do {
-          checkThirdWord = prompt("Write last word");
+          checkThirdWord = prompt("Write last word 🖊");
           if (
             !(checkThirdWord && checkThirdWord.length && isNaN(checkThirdWord))
           ) {
